@@ -1,0 +1,14 @@
+div {
+    font-size: 22px;
+    padding: 0;
+    color: #000;
+    font-family: 'Fugue', verdana;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+img {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 700px;
+}

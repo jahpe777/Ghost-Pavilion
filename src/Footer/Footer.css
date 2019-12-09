@@ -1,0 +1,10 @@
+.links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links li {
+    display: inline;
+    padding: 10px;
+}
+
