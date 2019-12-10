@@ -7,6 +7,7 @@ class WatchPage extends Component {
       <div className='watchpage'>
         <section className='black-and-blue'>
             <iframe 
+                title='blackandblue'
                 width='560' 
                 height='315' 
                 src='https://www.youtube.com/embed/7Uu_pHFaeuo' 
@@ -18,6 +19,7 @@ class WatchPage extends Component {
         </section>
         <section className='vacant-stories'>
             <iframe 
+                title='vacantstories'
                 width='560' 
                 height='315' 
                 src='https://www.youtube.com/embed/zvsYVJa-D_8' 
@@ -26,8 +28,9 @@ class WatchPage extends Component {
             >
             </iframe>
         </section>
-        <section>
+        <section className='live-video'>
             <iframe 
+            title='livevideo'
             width='560' 
             height='315' 
             src='https://www.youtube.com/embed/6Phl_yT9XK4' 

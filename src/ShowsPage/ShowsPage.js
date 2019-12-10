@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState, useContext } from 'react';
 import './ShowsPage.css';
+import { Context } from '../Context';
 
-class ShowsPage extends Component {
-  render() {
+const ShowsPage = () => {
+    const [ shows ] = useContext(Context)
     return (
       <div className='showspage'>
         <section className='image-showspage'>
-            <p>shows</p>
+            {shows.map(show => (
+                <Show key={ shows.id } show={ shows.show } date={ shows.date } />
+            ))}
         </section>
       </div>
     );
   }
-}
 
 export default ShowsPage;

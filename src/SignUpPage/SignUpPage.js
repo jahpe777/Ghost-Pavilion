@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import './SignUpPage.css';
+import { Context } from '../Context';
 
-class SignUpPage extends Component {
+const SignUpPage = () => {
+    const [ email ] = useContext(Context);
 
     constructor() {
         super();
@@ -10,15 +12,15 @@ class SignUpPage extends Component {
     
       handleSubmit(event) {
         event.preventDefault();
-        const data = new FormData(event.target);
         
+        console.log(event.target.username.value)
         fetch('/api/form-submit-url', {
           method: 'POST',
           body: data,
         });
       }
+    }
 
-  render() {
     return (
       <div className='signuppage'>
         <section className='image-signuppage'>
@@ -39,6 +41,5 @@ class SignUpPage extends Component {
       </div>
     );
   }
-}
 
 export default SignUpPage;
