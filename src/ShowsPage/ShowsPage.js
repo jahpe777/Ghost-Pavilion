@@ -1,18 +1,28 @@
-import React, { useState, useContext } from 'react';
+import React, { Component } from 'react';
 import './ShowsPage.css';
-import { Context } from '../Context';
+import BandContext from '../Contexts/BandContext';
 
-const ShowsPage = () => {
-    const [ shows ] = useContext(Context)
-    return (
-      <div className='showspage'>
-        <section className='image-showspage'>
-            {shows.map(show => (
-                <Show key={ shows.id } show={ shows.show } date={ shows.date } />
-            ))}
-        </section>
-      </div>
-    );
-  }
+class ShowsPage extends Component {
+    static contextType = BandContext;
+
+    render() {
+        return (
+        <BandContext.Consumer>
+            {(value) => (
+                <div className='showspage'>
+                <section className='image-showspage'>
+                    {shows.map(show => (
+                        <div key={ show.id }> 
+                            <h3>venue={ show.venue }</h3> 
+                            <h3>date={ show.date }</h3>
+                        </div>
+                    ))}
+                </section>
+                </div>
+            )}  
+        </BandContext.Consumer>
+        );
+    }
+}
 
 export default ShowsPage;

@@ -1,45 +1,46 @@
-import React, { useContext } from 'react';
+import React, { Component } from 'react';
 import './SignUpPage.css';
-import { Context } from '../Context';
+import BandContext from '../Contexts/BandContext';
 
-const SignUpPage = () => {
-    const [ email ] = useContext(Context);
-
-    constructor() {
-        super();
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
+class SignUpPage extends Component {
+    static contextType = BandContext;
     
-      handleSubmit(event) {
+    handleSubmit = event => {
         event.preventDefault();
         
-        console.log(event.target.username.value)
-        fetch('/api/form-submit-url', {
-          method: 'POST',
-          body: data,
-        });
-      }
-    }
+        const email = event.target.email.value;
 
-    return (
-      <div className='signuppage'>
-        <section className='image-signuppage'>
-            <header>
-                <h3>Mailing List</h3>
-            </header>
-            <div className='signup-detail'>
-                <p>Hear about upcoming shows, free downloads and more!</p>
-            </div>
-            <form className='signup-form' onSubmit={this.handleSubmit}>
-                <div>
-                    <label htmlFor="username">Email</label>
-                    <input placeholder="johnsmith@gmail.com" type="text" name='username' id='username' />
+        this.context.addNewSubscriber(email);
+
+        console.log(email)
+        /*fetch('/api/form-submit-url', {
+            method: 'POST',
+            body: data,
+        });*/
+
+    }
+    
+    render() {
+        return (
+        <div className='signuppage'>
+            <section className='image-signuppage'>
+                <header>
+                    <h3>Mailing List</h3>
+                </header>
+                <div className='signup-detail'>
+                    <p>Hear about upcoming shows, free downloads and more!</p>
                 </div>
-                <button type='submit'>Sign Up</button>
-            </form>
-        </section>
-      </div>
-    );
-  }
+                <form className='signup-form' onSubmit={this.handleSubmit}>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input placeholder="johnsmith@gmail.com" type="text" name='email' id='email' />
+                    </div>
+                    <button type='submit'>Sign Up</button>
+                </form>
+            </section>
+        </div>
+        );
+    }
+}
 
 export default SignUpPage;
