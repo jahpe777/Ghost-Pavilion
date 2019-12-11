@@ -21,24 +21,24 @@ class App extends Component {
     super();
     this.state = {
       shows: [
-        {
+      {
           id: 1,
           venue: 'Los Globos',
-          date: "2019-12-20T00:00:00.000Z",
+          date: "Decemeber 12 2019",
       },
       {
           id: 2,
           venue: 'The Echo',
-          date: "2020-01-10T00:00:00.000Z",
+          date: "January 10 2020",
       },
       {
           id: 3,
           venue: 'The Smell',
-          date: "2020-02-12T00:00:00.000Z",
+          date: "February 12 2020",
       }
     ],
       subscribers: [
-        {
+      {
           id: 1,
           email: 'james@gmail.com',
           emailDate: "2019-12-18T00:00:00.000Z",
