@@ -8,10 +8,10 @@ class ShowsPage extends Component {
     render() {
         return (
         <BandContext.Consumer>
-            {(value) => (
+            {/* {(value) => ( */}
                 <div className='showspage'>
                 <section className='image-showspage'>
-                    {shows.map(show => (
+                    {this.BandContext.shows.map(show => (
                         <div key={ show.id }> 
                             <h3>venue={ show.venue }</h3> 
                             <h3>date={ show.date }</h3>
