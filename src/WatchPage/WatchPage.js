@@ -11,7 +11,7 @@ class WatchPage extends Component {
                 width='560' 
                 height='315' 
                 src='https://www.youtube.com/embed/7Uu_pHFaeuo' 
-                frameborder='0' 
+                frameBorder='0' 
                 allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
                 allowFullScreen
             >
@@ -23,8 +23,8 @@ class WatchPage extends Component {
                 width='560' 
                 height='315' 
                 src='https://www.youtube.com/embed/zvsYVJa-D_8' 
-                frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
-                allowfullscreen
+                frameBorder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
+                allowFullScreen
             >
             </iframe>
         </section>
@@ -34,9 +34,9 @@ class WatchPage extends Component {
             width='560' 
             height='315' 
             src='https://www.youtube.com/embed/6Phl_yT9XK4' 
-            frameborder='0' 
+            frameBorder='0' 
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
-            allowfullscreen
+            allowFullScreen
             >
             </iframe>
         </section>

@@ -7,12 +7,10 @@ class SignUpPage extends Component {
     
     handleSubmit = event => {
         event.preventDefault();
-        
         const email = event.target.email.value;
-
         this.context.addNewSubscriber(email);
+        alert('Thanks for signing up!');
 
-        console.log(email)
         /*fetch('/api/form-submit-url', {
             method: 'POST',
             body: data,
@@ -31,16 +29,14 @@ class SignUpPage extends Component {
                     <p>Hear about upcoming shows, free downloads and more!</p>
                 </div>
                 <form className='signup-form' onSubmit={this.handleSubmit}>
-                    <div>
                         <label htmlFor="email">Email</label>
                         <input placeholder="johnsmith@gmail.com" type="text" name='email' id='email' />
-                    </div>
-                    <button type='submit'>Sign Up</button>
+                    <button type='submit' >Sign Up</button>
                 </form>
             </section>
         </div>
         );
     }
-}
+};
 
 export default SignUpPage;
