@@ -7,7 +7,7 @@ class ListenPage extends Component {
       <div className='listenpage'>
         <section>
             <iframe 
-                title='adsbhashj'
+                title='bleed-on-sunset'
                 border='0' 
                 width='350px' 
                 height='442px' 
@@ -18,7 +18,7 @@ class ListenPage extends Component {
         </section>
         <section>
             <iframe 
-                title='adsbhashj'
+                title='oblivion'
                 border='0' 
                 width='350px' 
                 height='470px' 
@@ -29,7 +29,7 @@ class ListenPage extends Component {
         </section>
         <section>
             <iframe 
-                title='adsbhashj'
+                title='traces'
                 border='0' 
                 width='350' 
                 height='470px' 

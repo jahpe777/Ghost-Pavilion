@@ -8,8 +8,8 @@ class WatchPage extends Component {
         <section className='black-and-blue'>
             <iframe 
                 title='blackandblue'
-                width='560' 
-                height='315' 
+                width='840' 
+                height='473' 
                 src='https://www.youtube.com/embed/7Uu_pHFaeuo' 
                 frameBorder='0' 
                 allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
@@ -20,8 +20,8 @@ class WatchPage extends Component {
         <section className='vacant-stories'>
             <iframe 
                 title='vacantstories'
-                width='560' 
-                height='315' 
+                width='840' 
+                height='473' 
                 src='https://www.youtube.com/embed/zvsYVJa-D_8' 
                 frameBorder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
                 allowFullScreen
@@ -31,8 +31,8 @@ class WatchPage extends Component {
         <section className='live-video'>
             <iframe 
             title='livevideo'
-            width='560' 
-            height='315' 
+            width='840' 
+            height='473' 
             src='https://www.youtube.com/embed/6Phl_yT9XK4' 
             frameBorder='0' 
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' 
