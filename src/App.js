@@ -16,44 +16,12 @@ import BandContext from './Contexts/BandContext';
 
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
-      shows: [
-      {
-          id: 1,
-          venue: 'Los Globos',
-          date: "Decemeber 12 2019",
-      },
-      {
-          id: 2,
-          venue: 'The Echo',
-          date: "January 10 2020",
-      },
-      {
-          id: 3,
-          venue: 'The Smell',
-          date: "February 12 2020",
-      }
-    ],
-      subscribers: [
-      {
-          id: 1,
-          email: 'james@gmail.com',
-          emailDate: "2019-12-18T00:00:00.000Z",
-      },
-      {
-          id: 2,
-          email: 'bob@gmail.com',
-          emailDate: "2020-01-12T00:00:00.000Z",
-      },
-      {
-          id: 3,
-          email: 'higgs@gmail.com',
-          emailDate: "2020-02-14T00:00:00.000Z",
-      }
-    ],
+      shows: [],
+      subscribers: [],
+
       addNewSubscriber: email => {
         const newSubscriber = { id:uuidv4(), email, emailDate: new Date() }
         this.setState({ subscribers:[...this.state.subscribers, newSubscriber ]})
@@ -65,10 +33,47 @@ class App extends Component {
     // fetch call to get the bands shows
     // .then(res=>res.json())
     // .then(shows=>this.setState({shows}))
-    // fetch call to get allt he subscribers
+    // fetch call to get all the subscribers
+  //   fetch('/api/emails', {
+  //     headers: {
+  //         'Content-Type': 'application/json'
+  //     },
+  //     method: 'POST',
+  //     body: email,
+  // });
     // .then(res=>res.json())
     // .then(subs=>this.setState({subscribers:subs}))
   }
+
+
+//  //run api calls within componentDidMount
+//  componentDidMount() {
+//   //Promise.all will run both fetch methods
+//     Promise.all([
+//       fetch(`${config.API_ENDPOINT}/notes`),
+//       fetch(`${config.API_ENDPOINT}/folders`)
+//     ])
+//     //then is for an "accepted" item
+//       .then(([notesRes, foldersRes]) => {
+//         //if noteRes call is not successful you'd return the json and run a rejected event
+//         if (!notesRes.ok)
+//           return notesRes.json().then(e => Promise.reject(e));
+//         //if folderRes call is not successful you'd return the json and run a rejected event
+//         if (!foldersRes.ok)
+//           return foldersRes.json().then(e => Promise.reject(e));
+//         //if notesRes and folderRes are successful you'd return the json
+//           return Promise.all([notesRes.json(), foldersRes.json()]);
+//       })
+//       //then you'd change state of notes and folder
+//       .then(([notes, folders]) => {
+//         this.setState({notes, folders});
+//       })
+//       //if changestate is not successful, run an error
+//       .catch(error => {
+//         console.error({error});
+//       });
+//   }
+
 
   render() {
     return (

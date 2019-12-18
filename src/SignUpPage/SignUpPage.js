@@ -11,12 +11,6 @@ class SignUpPage extends Component {
         this.context.addNewSubscriber(email);
         this.form.reset();
         alert('Thanks for signing up!');
-
-        /*fetch('/api/form-submit-url', {
-            method: 'POST',
-            body: data,
-        });*/
-
     }
     
     render() {
