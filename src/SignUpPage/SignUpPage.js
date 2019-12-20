@@ -27,8 +27,8 @@ class SignUpPage extends Component {
                 <br />
                 <form 
                     className='signup-form' 
-                    ref={form => this.form = form} 
-                    onSubmit={this.handleSubmit}
+                    ref={ form => this.form = form } 
+                    onSubmit={ this.handleSubmit }
                 >
                         <label htmlFor="email">Email</label>
                         <input placeholder="johnsmith@gmail.com" type="text" name='email' id='email' />

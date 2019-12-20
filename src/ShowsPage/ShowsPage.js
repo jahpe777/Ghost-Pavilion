@@ -7,23 +7,23 @@ class ShowsPage extends Component {
 
     render() {
         return (
-        <BandContext.Consumer>
-            {(value) => (
-                <div className='showspage'>
+            <div className='showspage'>
                 <section className='image-showspage'>
-                    {this.context.shows.map(show => (
+                    {this.context.shows.map(show => {
+                        const d = new Date(show.datetime);
+                        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        return (
                         <div key={ show.id }> 
-                            <h3>{ show.venue }</h3>
-                            <h3>{ show.date }</h3>
+                            <h2>{ `${ months[d.getMonth()] } ${ d.getDate() }, ${ d.getFullYear() }` }</h2>
+                            <h5>{ show.venue.city }, { show.venue.region }</h5>
+                            <h5>{ show.venue.name }</h5>
                             <br/>
                         </div>
-                    ))}
+                    )})}
                 </section>
-                </div>
-            )}  
-        </BandContext.Consumer>
-        );
+            </div>
+            ) 
+        }
     }
-}
 
 export default ShowsPage;

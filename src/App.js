@@ -13,7 +13,7 @@ import ShowsPage from './ShowsPage/ShowsPage';
 import SignUpPage from './SignUpPage/SignUpPage';
 
 import BandContext from './Contexts/BandContext';
-
+import config from './config'
 
 class App extends Component {
   constructor() {
@@ -24,12 +24,12 @@ class App extends Component {
 
       addNewSubscriber: email => {
         const newSubscriber = { id:uuidv4(), email, emailDate: new Date() }
-        fetch('http://localhost:9000/api/emails', {
+        fetch(`${config.API_ENDPOINT}/api/emails`, {
           headers: {
               'Content-Type': 'application/json'
           },
           method: 'POST',
-          body: { email },
+          body: JSON.stringify({ email })
       })
         .then(res => {
         this.setState({ subscribers:[...this.state.subscribers, newSubscriber ]})
@@ -39,13 +39,29 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
-    // fetch call to get the bands shows
-    // .then(res=>res.json())
-    // .then(shows=>this.setState({shows}))
-    // fetch call to get all the subscribers
+  componentDidMount() {
+    fetch(config.BANDS_API_ENDPOINT, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      }
+    })
+      .then(res => {
+        if (!res.ok) {
+          return res.json().then(error => Promise.reject(error))
+        }
+        return res.json()
+      })
+      .then(shows => {
+        this.setState({ shows: shows.reverse() })
+        console.log(shows)
+        console.log(this.state.shows)
+      })
+      .catch(error => {
+        console.error(error)
+        this.setState({ error })
+      })
   }
-
 
   render() {
     return (

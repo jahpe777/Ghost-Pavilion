@@ -17,8 +17,8 @@ section.navbar {
 }
 
 .navlinks {
-	list-style: none;
-    padding-bottom: 10px;
+    list-style: none;
+    padding: 0px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
