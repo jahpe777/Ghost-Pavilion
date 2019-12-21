@@ -1,3 +1,7 @@
+.footer {
+    padding: 10px;
+}
+
 .links {
     list-style-type: none;
     padding: 0;
@@ -6,5 +10,10 @@
 .links li {
     display: inline;
     padding: 10px;
+}
+
+.icons {
+    height: 40px;
+    width: 40px;
 }
 

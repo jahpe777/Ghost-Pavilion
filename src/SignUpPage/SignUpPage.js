@@ -22,7 +22,9 @@ class SignUpPage extends Component {
                     <br />
                 </header>
                 <div className='signup-detail'>
-                    <p>Hear about upcoming shows, free downloads and more!</p>
+                    <p>Hear about upcoming shows</p>
+                    <p>Free downloads</p>  
+                    <p>and more!</p>
                 </div>
                 <br />
                 <form 
@@ -30,10 +32,10 @@ class SignUpPage extends Component {
                     ref={ form => this.form = form } 
                     onSubmit={ this.handleSubmit }
                 >
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Email: </label>
                         <input placeholder="johnsmith@gmail.com" type="text" name='email' id='email' />
                         <br />
-                    <button type='submit' >Sign Up</button>
+                    <button type='submit'>Sign Up</button>
                 </form>
             </section>
         </div>

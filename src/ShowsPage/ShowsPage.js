@@ -14,9 +14,9 @@ class ShowsPage extends Component {
                         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                         return (
                         <div key={ show.id }> 
-                            <h2>{ `${ months[d.getMonth()] } ${ d.getDate() }, ${ d.getFullYear() }` }</h2>
-                            <h5>{ show.venue.city }, { show.venue.region }</h5>
-                            <h5>{ show.venue.name }</h5>
+                            <h3>{ `${ months[d.getMonth()] } ${ d.getDate() }, ${ d.getFullYear() }` }</h3>
+                            <h6>{ show.venue.city }, { show.venue.region }</h6>
+                            <h6>{ show.venue.name }</h6>
                             <br/>
                         </div>
                     )})}

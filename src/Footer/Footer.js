@@ -7,37 +7,37 @@ function Footer(props) {
                 <ul className='links'>
                     <li>
                         <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/GhostPavilion'>
-                            <i className='fab fa-facebook'></i>
+                            <img className='icons' src='images/facebook.png' />
                         </a>
                     </li>
                     <li>
                         <a target='_blank' rel='noopener noreferrer' href='https://www.twitter.com/ghost_pavilion'>
-                            <i className='fab fa-twitter'></i>
+                            <img className='icons' src='images/twitter.png' />
                         </a>
                     </li>
                     <li>
                         <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/ghost_pavilion'>
-                            <i className='fab fa-instagram'></i>
+                            <img className='icons' src='images/instagram.png' />   
                         </a>
                     </li>
                     <li>
                         <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/channel/UCr56a0HjTtBCzkTu1rgRQWg'>
-                            <i className='fab fa-youtube'></i>
+                            <img className='icons' src='images/youtube.png' />
                         </a>
                     </li>
                     <li>
                         <a target='_blank' rel='noopener noreferrer' href='https://soundcloud.com/ghost-pavilion'>
-                            <i className='fab fa-soundcloud'></i>
+                            <img className='icons' src='images/soundcloud.png' />   
                         </a>
                     </li>
                     <li>
                         <a target='_blank' rel='noopener noreferrer' href='https://ghostpavilion.bandcamp.com/'>
-                            <i className='fab fa-bandcamp'></i>
+                            <img className='icons' src='images/bandcamp.png' />
                         </a>
                     </li>
                     <li>
                         <a target='_blank' rel='noopener noreferrer' href='mailto:info@ghostpavilion.com'>
-                            <i className='far fa-envelope'></i>
+                            <img className='icons' src='images/email.png' />
                         </a>
                     </li>
                 </ul>
