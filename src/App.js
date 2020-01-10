@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import uuidv4 from 'uuid/v4';
 
 import './App.css';
 
@@ -10,6 +9,8 @@ import LandingPage from './LandingPage/LandingPage';
 import WatchPage from './WatchPage/WatchPage';
 import ListenPage from './ListenPage/ListenPage';
 import ShowsPage from './ShowsPage/ShowsPage';
+import AdminLogin from './AdminLogin/AdminLogin';
+import AdminShows from './AdminShows/AdminShows';
 import SignUpPage from './SignUpPage/SignUpPage';
 
 import BandContext from './Contexts/BandContext';
@@ -22,8 +23,24 @@ class App extends Component {
       shows: [],
       subscribers: [],
 
+      addNewShow: show => {
+        fetch(`${config.API_ENDPOINT}/api/shows`, {
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          method: 'POST',
+          body: JSON.stringify({ show })
+          // { show } {show:show}
+        })
+        .then(res=>res.json())
+        .then(res => {
+          console.log(res);
+          this.setState({ shows:[...this.state.shows, res ]})
+        })
+        .catch(err => console.log(err));
+      },
+
       addNewSubscriber: email => {
-        const newSubscriber = { id:uuidv4(), email, emailDate: new Date() }
         fetch(`${config.API_ENDPOINT}/api/emails`, {
           headers: {
               'Content-Type': 'application/json'
@@ -32,7 +49,7 @@ class App extends Component {
           body: JSON.stringify({ email })
       })
         .then(res => {
-        this.setState({ subscribers:[...this.state.subscribers, newSubscriber ]})
+        this.setState({ subscribers:[...this.state.subscribers, res ]})
       })
         .catch(err => console.log(err));
       }
@@ -40,7 +57,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(config.BANDS_API_ENDPOINT, {
+    // need to fetch the BE to get all shows from the database
+    fetch(`${config.API_ENDPOINT}/api/shows`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
@@ -53,12 +71,10 @@ class App extends Component {
         return res.json()
       })
       .then(shows => {
-        this.setState({ shows: shows.reverse() })
-        console.log(shows)
-        console.log(this.state.shows)
+        // still do this step
+        this.setState({ shows: shows })
       })
       .catch(error => {
-        console.error(error)
         this.setState({ error })
       })
   }
@@ -76,6 +92,8 @@ class App extends Component {
             <Route exact path='/listen' component={ ListenPage }/>
             <Route exact path='/shows' component={ ShowsPage }/>
             <Route exact path='/signup' component={ SignUpPage }/>
+            <Route exact path='/admin' component={ AdminLogin }/>
+            <Route exact path='/admin_shows' component={ AdminShows }/>
           </main>
           <footer>
             <Route path='/' component={ Footer }/> 

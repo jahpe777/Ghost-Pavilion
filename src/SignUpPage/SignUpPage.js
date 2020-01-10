@@ -18,24 +18,22 @@ class SignUpPage extends Component {
         <div className='signuppage'>
             <section className='image-signuppage'>
                 <header>
-                    <h3>Mailing List</h3>
-                    <br />
+                    <h3 className='mailing'>Mailing List</h3>
                 </header>
                 <div className='signup-detail'>
                     <p>Hear about upcoming shows</p>
                     <p>Free downloads</p>  
                     <p>and more!</p>
                 </div>
-                <br />
                 <form 
                     className='signup-form' 
                     ref={ form => this.form = form } 
                     onSubmit={ this.handleSubmit }
                 >
-                        <label htmlFor="email">Email: </label>
-                        <input placeholder="johnsmith@gmail.com" type="text" name='email' id='email' />
-                        <br />
-                    <button type='submit'>Sign Up</button>
+                    <p><label htmlFor="email">Email: </label>
+                        <input placeholder="johnsmith@gmail.com" type="email" required name='email' id='email' /></p>
+
+                    <p><button type='submit'>Sign Up</button></p>
                 </form>
             </section>
         </div>

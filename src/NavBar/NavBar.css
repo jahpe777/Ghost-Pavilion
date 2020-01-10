@@ -28,3 +28,7 @@ section.navbar {
     display: inline;
     padding: 20px;
 }
+
+a:hover {
+    color: #b3fcc4;
+  }
