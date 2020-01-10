@@ -102,6 +102,6 @@ class App extends Component {
       </BandContext.Provider>
     );
   }
-};
+}
 
 export default App;
