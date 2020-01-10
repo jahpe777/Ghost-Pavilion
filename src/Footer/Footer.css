@@ -15,5 +15,17 @@
 .icons {
     height: 40px;
     width: 40px;
+    opacity: .5;
+}
+
+.icons:hover {
+    opacity: 1;
+  }
+
+@media screen and (max-width: 415px) {
+    .icons {
+        height: 30px;
+        width: 30px;
+    } 
 }
 

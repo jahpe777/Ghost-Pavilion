@@ -6,7 +6,7 @@ class WatchPage extends Component {
     return (
       <div className='watchpage'>
         <section className='black-and-blue'>
-            <iframe 
+            <iframe className='videos'
                 title='blackandblue'
                 width='46.3%' 
                 height='473' 
@@ -18,7 +18,7 @@ class WatchPage extends Component {
             </iframe>
         </section>
         <section className='vacant-stories'>
-            <iframe 
+            <iframe className='videos'
                 title='vacantstories'
                 width='46.3%' 
                 height='473' 
@@ -29,7 +29,7 @@ class WatchPage extends Component {
             </iframe>
         </section>
         <section className='live-video'>
-            <iframe 
+            <iframe className='videos'
             title='livevideo'
             width='46.3%' 
             height='473' 

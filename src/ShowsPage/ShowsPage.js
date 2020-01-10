@@ -10,13 +10,13 @@ class ShowsPage extends Component {
             <div className='showspage'>
                 <section className='image-showspage'>
                     {this.context.shows.map(show => {
-                        const d = new Date(show.datetime);
+                        const d = new Date(show.date);
                         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                         return (
                         <div key={ show.id }> 
                             <h3>{ `${ months[d.getMonth()] } ${ d.getDate() }, ${ d.getFullYear() }` }</h3>
-                            <h6>{ show.venue.city }, { show.venue.region }</h6>
-                            <h6>{ show.venue.name }</h6>
+                            <h6>{ show.city }</h6>
+                            <h6>{ show.venue }</h6>
                             <br/>
                         </div>
                     )})}
