@@ -31,6 +31,7 @@ class App extends Component {
           method: 'POST',
           body: JSON.stringify({ show })
           // { show } {show:show}
+          // JSON.stringify(show)
         })
         .then(res=>res.json())
         .then(res => {
