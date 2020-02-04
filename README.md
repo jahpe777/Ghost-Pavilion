@@ -8,14 +8,12 @@ At the moment there is no secure authentication.
 
 The Ghost Pavilion app uses React and is built with Zeit. It uses context to control state. 
 
-public/images/screenshots/landing.png
+![image](public/images/screenshots/landing.png)
 
-![image](public/image/screenshots/landing.png)
+![image](public/images/screenshots/videos.png)
 
-![image](public/image/screenshots/videos.png)
+![image](public/images/screenshots/listen.png)
 
-![image](public/image/screenshots/listen.png)
+![image](public/images/screenshots/shows.png)
 
-![image](public/image/screenshots/shows.png)
-
-![image](public/image/screenshots/subscribers.png)
+![image](public/images/screenshots/subscribers.png)
